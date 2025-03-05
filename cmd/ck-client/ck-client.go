@@ -20,7 +20,9 @@ type CkClient struct {
 	session   *mux.Session
 }
 
-func NewCkClient(config *client.RawConfig) *CkClient {
+type Config *client.RawConfig
+
+func NewCkClient(config Config) *CkClient {
 	return &CkClient{config: config}
 }
 
